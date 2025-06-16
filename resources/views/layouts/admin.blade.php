@@ -64,6 +64,8 @@
                                     href="{{ route('product.index') }}">Products</a>
                                 <a class="{{ request()->is('cart-item-list') ? 'activeSideMenu' : '' }}"
                                     href="{{ route('cart.list') }}">Cart</a>
+                                <a class="{{ request()->is('order-list') ? 'activeSideMenu' : '' }}"
+                                    href="{{ route('order.list') }}">Oders</a>
                             </div>
                         </div>
                     </div>

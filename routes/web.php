@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/cart/{product}', [CartController::class, 'store'])->name('cart.store');
     Route::delete('/cart/{cart}', [CartController::class, 'destroy'])->name('cart.delete');
     Route::patch('/cart/{cart}', [CartController::class, 'updateQTY'])->name('cart.updateqty');
+    Route::post('/checkout', [OrderController::class, 'store'])->name('checkout');
+    Route::get('/orders', [OrderController::class, 'index'])->name('order');
 });
 
 Route::get('/dashboard', function () {

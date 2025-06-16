@@ -2,8 +2,11 @@
     <div class="row my-5">
         <div class="col-md-8 mx-auto">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header d-flex justify-content-between">
                     <p class="fw-bold fs-5">My Cart</p>
+                    <div>
+                        <a class="btn" href="{{ route('order') }}">Check Orders</a>
+                    </div>
                 </div>
                 <div class="card-body">
                     @session('message')
@@ -91,6 +94,10 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <form method="post" action="{{ route('checkout') }}">
+                                @csrf
+                                <button class="btn btn-warning">Check Out Now!</button>
+                            </form>
                         </div>
                     @else
                         <div class="mt-5 text-center mb-2">

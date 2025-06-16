@@ -67,7 +67,7 @@ class AdminProductController extends Controller
         }
 
         $product->update($validatedData);
-        return view('admin.products.edit', ['product' => $product, 'message' => 'Product updated successfully']);
+        return  redirect()->route('product.index')->with(['message' => 'Product updated successfully']);
     }
 
     public function destroy(Product $product)
@@ -78,6 +78,6 @@ class AdminProductController extends Controller
 
         $product = Product::latest()->paginate(20);
 
-        return view('admin.products.index', ['products' => $product, 'message' => 'Product deleted successfully']);
+        return redirect()->route('product.index')->with(['message' => 'Product deleted successfully']);
     }
 }

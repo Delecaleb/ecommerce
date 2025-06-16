@@ -1,0 +1,56 @@
+.product-image{
+    max-height: 300px;
+    overflow: hidden;
+    min-height: 300px;
+}
+.product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sideNav{
+    min-height: 90vh;
+}
+.sideNav a{
+  padding: 15px 20px 15px 20px;
+  display: block;
+  text-decoration: none;
+  display: block;
+  color: black;
+  transition: 0.3s;
+  border-bottom: 1px solid gray;
+}
+
+.sideNav a:hover{
+    color: white;
+    background-color: black;
+  }
+  .activeSideMenu{
+    color: white !important;
+    background-color: black !important;
+  }
+
+.price{
+    color: orange;
+}
+
+.cartQuantity{
+    width: 40%;
+    padding: 0%;
+}
+.error-code{
+    font-size: 200px;
+}
+.error-text{
+    font-size: 20px;
+}
+
+td{
+   vertical-align: middle;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
